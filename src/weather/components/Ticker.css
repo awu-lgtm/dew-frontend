@@ -1,0 +1,154 @@
+/* .ticker {
+  background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+	border-radius: 40px;
+  box-sizing: border-box;
+	color: #00a84f;
+	display: block;
+	font: 1.125rem 'Oswald', Arial, sans-serif;
+	height: 80px;
+	letter-spacing: 1px;
+	margin: 0 auto;
+	padding: 4px;
+	position: relative;
+  text-decoration: none;
+	text-transform: uppercase;
+	width: 264px;
+	z-index: 2;
+}  */
+
+.ticker {
+  z-index: 0;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 2.25rem;
+
+  backdrop-filter: blur(30px);
+
+  display: flex;
+  align-items: center;
+  
+}
+
+.ticker.with-border {
+  
+  width: 14rem;
+  height: 22.75rem;
+  position: fixed;
+  left: 100px;
+  top: 100px;
+
+  /* position: relative;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  width: 11.5%;
+  bottom: 0%; */
+
+  background: radial-gradient(circle at 50%, rgba(48, 55, 62, 0.36) 0%, rgba(28, 32, 36, 0.06) 100%);
+}
+
+.ticker.with-border::before {
+  content: "";
+  position: absolute;
+  z-index: -5;
+  inset: 0;
+  padding: 2px;
+  border-radius: 2.25rem;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.015));
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+          mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+/* .ticker {
+  box-sizing: border-box;
+  width: 14rem;
+  height: 23.25rem;
+
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  backdrop-filter: blur(30px);
+  border-radius: 36px;
+} */
+
+/* .ticker {
+  box-sizing: border-box;
+  width: 14rem;
+  height: 23.25rem;
+
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  background-image: radial-gradient(86.83% 90.05% at 53.22% 2.96%, rgba(48, 55, 62, 0.36) 0%, rgba(28, 32, 36, 0.06) 100%), radial-gradient(circle at top left, #f00,#3020ff);
+  border: double 4px transparent;
+  border-radius: 80px;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  backdrop-filter: blur(30px);
+  border-radius: 36px;
+} */
+
+.ticker.with-border::after {    
+  content: "";
+  background-image: url("../../assets/frosted glass.webp");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.02;
+ 
+  border-radius: 2.25rem;
+}
+
+.ticker.edge{
+  width: 14.7rem;
+  height: 23.2rem;
+  z-index: -2;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+
+  background: radial-gradient(circle at 50%,rgba(48, 55, 62, 0.6) 0%, rgba(28, 32, 36, 0.1) 100%)
+}
+
+.ticker-shadow {
+  z-index:-7;
+  position: absolute;
+  top: 24.2rem;
+  left: -2rem;
+
+  background-color: rgba(25, 25, 28, 100);
+  width: 19rem;
+  height: 1.3rem;
+  border-radius: 48%;
+  background-blend-mode: overlay;
+  filter: blur(0.625rem);
+}
+
+/* .ticker-size {
+  position: fixed;
+  left: 100px;
+  top: 100px;
+  width: clamp(50px, 15vw, 30rem);
+  height: 23.25rem;
+} */
+
+@font-face{
+  font-family: "Inter-SemiBold";
+  src: url("../../assets/fonts/Inter-SemiBold.woff2") format("woff2"),
+    url("../../assets/fonts/Inter-SemiBold.woff") format("woff")
+}

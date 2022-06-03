@@ -1,0 +1,80 @@
+.navbar-asdf {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.3rem 8%;
+  min-width: 50rem;
+}
+
+.links {
+  font-family: "Inter-Bold";
+  font-size: 1rem;
+  /* margin-right: 2rem; */
+  margin-right: clamp(0.5rem, 2rem, 4rem);
+}
+
+.links:visited {
+  color: white;
+}
+
+.links:link{
+  text-decoration: none;
+  color:white;
+}
+
+#login {
+  font-family: "Inter-Bold";
+  font-size: 1rem;
+}
+
+#login:link {
+  color: black;
+  text-decoration: none;
+}
+
+#login:visited {
+  text-decoration: none;
+  color: black;
+}
+
+#login-button {
+  background-color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 0.6rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+#login-button:hover{
+  background-color: rgba(255, 255, 255, 0.7)
+}
+
+.logo {
+  max-width: 7rem;
+  position: relative;
+  top: 0.3rem;
+  margin-right: auto;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links .asdf {
+  display: inline-block;
+}
+
+.nav-links .asdf .links{
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links .asdf .links:hover{
+  color: steelblue;
+}
+
+@font-face{
+  font-family: "Inter-Bold";
+  src: url("../../assets/fonts/Inter-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/Inter-Bold.woff") format("woff")
+}

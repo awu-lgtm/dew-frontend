@@ -1,0 +1,57 @@
+/* .weather-form {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 67vh;
+} */
+
+.form-field{
+  width: max(15vw, 17rem);
+  height: 3.8rem;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  border-color: rgba(255, 255, 255, 0.3);
+  text-indent: 0.7rem;
+}
+
+.form-field::placeholder{
+  font-family: "Inter-Semibold";
+}
+
+.form-field:focus{
+  transition: all 0.2s ease 0s;
+  outline: 3px solid steelblue;
+}
+
+.form-field.username {
+  border-radius: 0.4em 0.4em 0 0;
+}
+
+.form-field.password {
+  border-radius: 0 0 0.4em 0.4em;
+  margin-bottom: 1em;
+}
+
+.form-button{
+  width: max(15vw, 17.7rem);
+  border-radius: 0.4em;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  font-family: "Inter-SemiBold";
+  font-size: 1rem;
+  padding: 0.6rem 0 0.6rem 0;
+
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color:rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease 0s;
+}
+
+.sign-in-logo {
+  width: 8rem;
+}

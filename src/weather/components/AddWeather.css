@@ -1,0 +1,41 @@
+.plus-frame {
+}
+
+.plus{
+  position: fixed;
+  top: 100px;
+  left: 400px;
+  right: 0;
+  bottom: 0;
+}
+
+.plus-outline {
+  position: fixed;
+  top: 500px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.plus-outline:hover {
+  cursor: pointer;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  margin:0px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-content {
+  position: relative;
+  margin-bottom: 8rem;
+}

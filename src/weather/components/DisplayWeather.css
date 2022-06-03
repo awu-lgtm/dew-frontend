@@ -1,0 +1,76 @@
+#weather-icon {
+  display:block;
+  position: absolute;
+  top: 1.3rem;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-left: 4.1rem;
+  margin-bottom: 2rem;
+  width: 6.2rem;
+}
+
+.location {
+  position: absolute;
+  font-family: "Inter-SemiBold";
+  font-size: 1.9rem;
+  color: rgba(193, 193, 193, 0.9);
+  top: 9rem;
+  margin-left: 2.5rem;
+  display:block;
+  white-space: nowrap;
+  width: 10.5rem;
+  max-height: 2.25rem;
+  margin-bottom: 0.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.location-overlay {
+  position: absolute;
+  top: 9rem;
+  margin-left: 2.5rem;
+  width: 13rem;
+  max-height: 2.25rem;
+  margin-bottom: 0.5rem;
+  hyphens: auto;
+  overflow: hidden;
+  z-index: 10;
+  color: transparent;
+  font-family: "Inter-SemiBold";
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 1px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+
+.temp {
+  position:absolute;
+  top: 12rem;
+  font-family: "Inter-SemiBold";
+  font-size: 4.5rem;
+  color: rgb(193, 193, 193, 0.9);
+  margin-left: 2.5rem;
+}
+
+.advice {
+  position: absolute;
+  top: 17.5rem;
+  margin-top: 1rem;
+  font-family: "Inter-SemiBold";
+  font-size: 1.25rem;
+  color: rgb(124, 124, 124);
+  margin-left: 2.5rem;
+  margin-right: 1rem;
+  max-width: 11rem;
+  word-break: break-word;
+  line-height: 1.7rem;
+}
+
+#c {
+  font-size: 1.9rem;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -1em;
+}
