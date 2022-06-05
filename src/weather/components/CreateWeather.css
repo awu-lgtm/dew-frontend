@@ -1,23 +1,126 @@
-/* .weather-form {
+.sign-in-form-container {
+  z-index: -5;
+  position: fixed;
+  width: 100vw;
+  height: 80vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-weather-form {
+  position: relative;
+  width: 26rem;
+  height: 18rem;
+  max-height: 30rem;
+  padding: 0rem 3.1rem 2.7rem 3.1rem;
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 67vh;
-} */
+  /* background: radial-gradient(circle at top, rgba(48, 55, 62, 0.6) 0%, rgba(28, 32, 36, 0.1) 100%); */
+  background:rgb(20, 20, 26);
+  border-radius: 2.25rem;
+}
+
+.create-weather-form::after {    
+  content: "";
+  background-image: url("../../assets/frosted glass.webp");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.01;
+ 
+  border-radius: 2.25rem;
+}
+
+.form-field.weather {
+  z-index: 3;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+  width: inherit;
+  height: 4.4rem;
+  text-indent: 1.5rem;
+}
+
+.form-field.weather::placeholder {
+  font-size: 1.1rem;
+}
+
+.icon.search {
+  z-index: 4;
+  position: absolute;
+  width: 6%;
+  top: 52%;
+  left: 78%;
+}
+
+.addweather {
+  font-family: "Inter-Semibold";
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.list-container {
+  position: absolute;
+  box-sizing: border-box;
+  top: calc(50% + 3.2rem);
+  width: inherit;
+  padding: 0;
+  margin-left: 3.1rem;
+  margin-right: 3.1rem;
+  background-color: white;
+  background-clip: content-box;
+  border-radius: 0 0 0.4rem 0.4rem;
+  z-index: 4;
+}
+
+.auto-complete-list {
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0 0;
+  list-style: none;
+}
+
+.auto-complete-list > li {
+  z-index: 6;
+  font-family: "Inter-Regular";
+  font-size: 1.2rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  text-indent: 1.5rem;
+}
+
+.auto-complete-list > li:hover {
+  background-color:rgba(100, 100, 100);
+  cursor: pointer;
+}
 
 .form-field{
-  width: max(15vw, 17rem);
+  width: 98.44%;
   height: 3.8rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
   display:block;
   border-color: rgba(255, 255, 255, 0.3);
   text-indent: 0.7rem;
+  border-width: 0.15rem;
+  font-size: 1.2rem;
+  font-family: "Inter-Regular";;
+  border-width: 0.15rem;
 }
 
 .form-field::placeholder{
-  font-family: "Inter-Semibold";
+  font-family: "Inter-Regular";
+  font-size: 1rem;
 }
 
 .form-field:focus{
@@ -26,23 +129,27 @@
 }
 
 .form-field.username {
-  border-radius: 0.4em 0.4em 0 0;
+  border-radius: 0.4rem 0.4rem 0 0;
+  z-index: 5;
 }
 
 .form-field.password {
-  border-radius: 0 0 0.4em 0.4em;
-  margin-bottom: 1em;
+  z-index: 4;
+  border-radius: 0 0 0.4rem 0.4rem;
+  margin-bottom: 0.8vw;
 }
 
 .form-button{
-  width: max(15vw, 17.7rem);
-  border-radius: 0.4em;
-  margin-left: auto;
-  margin-right: auto;
+  z-index: 5;
+  width: 100%;
+  border-radius: 0.4rem;
+  margin-left: 0;
+  margin-right: 0;
   display:block;
   font-family: "Inter-SemiBold";
-  font-size: 1rem;
+  font-size: 1.3rem;
   padding: 0.6rem 0 0.6rem 0;
+  border-width: 0.15rem;
 
   cursor: pointer;
 }
@@ -53,5 +160,29 @@
 }
 
 .sign-in-logo {
-  width: 8rem;
+  width: 20rem;
+}
+
+.sign-up-link:link {
+  color:white;
+  text-decoration-color: white;
+	-webkit-text-decoration-color: white;
+}
+
+.sign-up-link {
+  z-index: 5;
+  color:white;
+  text-decoration-color: white;
+	-webkit-text-decoration-color: white;
+}
+
+.sign-up-link:visited {
+  color:white;
+  text-decoration-color: white;
+	-webkit-text-decoration-color: white;
+}
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url('../../assets/fonts/Inter-Regular.woff') format("woff");
 }

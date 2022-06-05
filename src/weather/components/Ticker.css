@@ -22,10 +22,15 @@
   display: inline-block;
   border-radius: 2.25rem;
 
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(3px);
 
   display: flex;
   align-items: center;
+
+    position: relative;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
   
 }
 
@@ -33,9 +38,6 @@
   
   width: 14rem;
   height: 22.75rem;
-  position: fixed;
-  left: 100px;
-  top: 100px;
 
   /* position: relative;
   top: 0%;
@@ -44,17 +46,17 @@
   width: 11.5%;
   bottom: 0%; */
 
-  background: radial-gradient(circle at 50%, rgba(48, 55, 62, 0.36) 0%, rgba(28, 32, 36, 0.06) 100%);
+  background: radial-gradient(circle at top, rgba(48, 55, 62, 0.20) 0%, rgba(28, 32, 36, 0.05) 100%);
 }
 
 .ticker.with-border::before {
   content: "";
   position: absolute;
-  z-index: -5;
+  z-index: -20;
   inset: 0;
-  padding: 2px;
+  padding: 0.2rem;
   border-radius: 2.25rem;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.015));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.01));
   -webkit-mask: 
      linear-gradient(#fff 0 0) content-box, 
      linear-gradient(#fff 0 0);
@@ -109,7 +111,7 @@
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.02;
+  opacity: 0.01;
  
   border-radius: 2.25rem;
 }
@@ -122,21 +124,22 @@
   left: 0rem;
   top: 0rem;
 
-  background: radial-gradient(circle at 50%,rgba(48, 55, 62, 0.6) 0%, rgba(28, 32, 36, 0.1) 100%)
+  background: radial-gradient(circle at 50%,rgba(48, 55, 62, 0.2) 0%, rgba(28, 32, 36, 0) 100%)
 }
 
 .ticker-shadow {
-  z-index:-7;
+  z-index: -21;
+  top: 97.3%;
+  left: 0.8rem;
   position: absolute;
-  top: 24.2rem;
-  left: -2rem;
+  margin: 0 0;
 
   background-color: rgba(25, 25, 28, 100);
-  width: 19rem;
-  height: 1.3rem;
-  border-radius: 48%;
+  width: 15rem;
+  height: 1.8rem;
+  border-radius: 50%;
   background-blend-mode: overlay;
-  filter: blur(0.625rem);
+  filter: blur(0.5rem);
 }
 
 /* .ticker-size {
@@ -146,6 +149,28 @@
   width: clamp(50px, 15vw, 30rem);
   height: 23.25rem;
 } */
+
+.xmark-container {
+  z-index: 5;
+  position: absolute;
+  width: 1.5rem;
+  top: 6%;
+  left: 80%;
+}
+
+.xmark {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.xmark-container:hover {
+  filter: brightness(0.95);
+  cursor: pointer;
+}
 
 @font-face{
   font-family: "Inter-SemiBold";

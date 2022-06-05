@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -8,10 +8,10 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { newLogin } from '../reducers/loginReducer';
-import { setStoredWeather } from '../../weather/reducers/weatherReducer';
 import './Login.css';
 // import './bootstrap.min.css';
 import logo from '../../assets/temp_logo-removebg-preview.png';
+import logo2 from '../../assets/dew-logo.svg';
 
 // Login for
 function Login() {
@@ -25,7 +25,6 @@ function Login() {
     e.preventDefault();
     // textInput.current.value = '';
     dispatch(newLogin({ username, password }, navigate));
-    dispatch(setStoredWeather());
     setUsername('');
     setPassword('');
   };
@@ -67,11 +66,17 @@ function Login() {
       </Container>
       <br /> */}
       <form onSubmit={handleSubmit}>
-        <div className="sign-in-form">
-          <img src={logo} alt="logo" className="sign-in-logo" />
-          <input className="form-field username" type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
-          <input className="form-field password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-          <button className="form-button" type="submit"> Sign in </button>
+        <div className="sign-in-form-container">
+          <div className="sign-in-form">
+            <img src={logo2} alt="logo" className="sign-in-logo" />
+            <input className="form-field username" type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
+            <input className="form-field password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+
+            <Link to="/signup" className="sign-up-link">
+              <span> Sign up </span>
+            </Link>
+            <button className="form-button" type="submit"> Sign in </button>
+          </div>
         </div>
       </form>
     </div>

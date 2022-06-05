@@ -10,11 +10,7 @@
 }
 
 .plus-outline {
-  position: fixed;
-  top: 500px;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  height: 24.31rem; 
 }
 
 .plus-outline:hover {
@@ -27,15 +23,16 @@
   left: 0;
   top: 0;
   z-index: 10;
-  height: 100vh;
+  height: 80vh;
+  padding-bottom: 21vh;
   width: 100vw;
-  margin:0px;
+  margin:0 0;
   display: flex;
   justify-content:center;
   align-items:center;
 }
 
-.modal-content {
+/* .modal-content {
   position: relative;
   margin-bottom: 8rem;
-}
+} */

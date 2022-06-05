@@ -8,13 +8,18 @@ function DisplayAllWeather() {
   if (weathers.length > 0) {
     return (
       <div>
-        <ul style={{ listStyleType: 'none' }}>
+        {/* <ul style={{ listStyleType: 'none' }}>
           {weathers.map((weather) => (
             <li key={weather.name}>
               <Ticker weather={weather} />
             </li>
           ))}
-        </ul>
+        </ul> */}
+        {weathers.map((weather) => (
+          <div key={`${JSON.stringify(weather.coord)}`}>
+            <Ticker weather={weather} />
+          </div>
+        ))}
       </div>
     );
   }

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { signOut } from '../../login/reducers/loginReducer';
 import logo from '../../assets/temp_logo-removebg-preview.png';
+import logo2 from '../../assets/dew-logo.svg';
 
 function Navbar() {
   const user = useSelector((state) => state.user);
@@ -11,7 +12,7 @@ function Navbar() {
 
   return (
     <div className="navbar-asdf">
-      <img className="logo" src={logo} alt="logo" />
+      <img className="logo" src={logo2} alt="logo" />
       {/* sets internal routing links */}
       <nav>
         <ul className="nav-links">

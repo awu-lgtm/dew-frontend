@@ -1,0 +1,17 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_i_119_168)">
+<path d="M76 80H12C5.37258 80 0 74.6274 0 68C0 62.7047 3.42975 58.2106 8.18898 56.6178C8.06447 55.7632 8 54.8891 8 54C8 44.0589 16.0589 36 26 36C26.9006 36 27.7857 36.0661 28.6507 36.1938C31.2885 24.6295 41.6365 16 54 16C67.8188 16 79.1196 26.7806 79.951 40.3902C89.1043 42.2243 96 50.3068 96 60C96 71.0457 87.0457 80 76 80Z" fill="#C1C1C1"/>
+</g>
+<defs>
+<filter id="filter0_i_119_168" x="0" y="0" width="99" height="100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="3" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_119_168"/>
+</filter>
+</defs>
+</svg>

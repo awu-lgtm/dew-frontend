@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 1.3rem 8%;
+  padding: 3vh 8%;
   min-width: 50rem;
 }
 
@@ -10,7 +10,7 @@
   font-family: "Inter-Bold";
   font-size: 1rem;
   /* margin-right: 2rem; */
-  margin-right: clamp(0.5rem, 2rem, 4rem);
+  margin-right: 2rem;
 }
 
 .links:visited {
@@ -51,10 +51,12 @@
 }
 
 .logo {
-  max-width: 7rem;
+  margin-top: 1rem;
+  max-width: 2.8rem;
   position: relative;
   top: 0.3rem;
   margin-right: auto;
+  filter: brightness(0.85);
 }
 
 .nav-links {
@@ -77,4 +79,34 @@
   font-family: "Inter-Bold";
   src: url("../../assets/fonts/Inter-Bold.woff2") format("woff2"),
     url("../../assets/fonts/Inter-Bold.woff") format("woff")
+}
+
+@media only screen and (max-width: 1800px) {
+  [class="links"] {
+    font-size: 17px;
+    margin-right: 2vw;
+  }
+  #login {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  [class="links"] {
+    font-size: 15px;
+    margin-right: 2vw;
+  }
+  #login {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  [class="links"] {
+    font-size: 13px;
+    margin-right: 15px;
+  }
+  #login {
+    font-size: 13px;
+  }
 }

@@ -1,5 +1,4 @@
 import axios from 'axios';
-import isoCountries from 'i18n-iso-countries';
 
 const baseURL = '/api/weather';
 
@@ -7,15 +6,37 @@ const baseURL = '/api/weather';
 const postWeather = async (city, lat, lon) => {
   const user = window.localStorage.getItem('loggedInUser');
   let token = '';
-  if (user) {
+  if (user !== 'undefined' && user !== null) {
     ({ token } = JSON.parse(user));
   }
   try {
     const response = await axios.post(baseURL, { city, lat, lon }, { headers: { authorization: `bearer ${token}` } });
-    console.log(response);
     return response.data;
-  } catch {
-    console.log('weather api failed');
+  } catch (error) {
+    console.log(error);
+    return undefined;
+  }
+};
+
+// deletes one ticker from user database
+const deleteWeather = async (city, lat, lon) => {
+  const user = window.localStorage.getItem('loggedInUser');
+  let token = '';
+  if (user !== 'undefined' && user !== null) {
+    ({ token } = JSON.parse(user));
+  }
+
+  const request = {
+    headers: { authorization: `bearer ${token}` },
+    data: { city, lat, lon },
+  };
+
+  try {
+    const response = await axios.delete(baseURL, request);
+    console.log('second');
+    return response.data;
+  } catch (error) {
+    console.log(error);
     return undefined;
   }
 };
@@ -24,7 +45,7 @@ const postWeather = async (city, lat, lon) => {
 const getStoredWeather = async () => {
   const user = window.localStorage.getItem('loggedInUser');
   let token = '';
-  if (user) {
+  if (user !== 'undefined' && user !== null) {
     ({ token } = JSON.parse(user));
   }
   try {
@@ -35,27 +56,27 @@ const getStoredWeather = async () => {
   }
 };
 
-const getLocation = async (city, country) => {
-  if (city === '') {
-    return undefined;
-  }
+// const getLocation = async (city, country) => {
+//   if (city === '') {
+//     return undefined;
+//   }
 
-  let code = '';
-  const countryCode = isoCountries.getAlpha2Code(country, 'en');
-  if (countryCode) {
-    code = `,${countryCode}`;
-  }
+//   let code = '';
+//   const countryCode = isoCountries.getAlpha2Code(country, 'en');
+//   if (countryCode) {
+//     code = `,${countryCode}`;
+//   }
 
-  try {
-    const response = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}${code}&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}`);
-    console.log(response.data);
-    return response.data[0];
-  } catch (e) {
-    console.log(e);
-  }
+//   try {
+//     const response = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}${code}&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}`);
+//     console.log(response.data);
+//     return response.data[0];
+//   } catch (e) {
+//     console.log(e);
+//   }
 
-  return undefined;
-};
+//   return undefined;
+// };
 
 // const getCurrentWeather = async (lat, lon) => {
 //   if (lat === '' || lon === '') {
@@ -65,4 +86,6 @@ const getLocation = async (city, country) => {
 //   return response.data;
 // };
 
-export default { getLocation, postWeather, getStoredWeather };
+export default {
+  postWeather, deleteWeather, getStoredWeather,
+};

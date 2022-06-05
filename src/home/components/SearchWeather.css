@@ -1,0 +1,35 @@
+.search-weather-container {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-weather-form {
+  position: relative;
+  width: 26rem;
+  height: 18rem;
+  max-height: 30rem;
+  padding: 0rem 3.1rem 2.7rem 3.1rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, rgba(48, 55, 62, 0.6) 0%, rgba(28, 32, 36, 0.1) 100%);
+  border-radius: 2.25rem;
+}
+
+.search-weather-form::after {    
+  content: "";
+  background-image: url("../../assets/frosted glass.webp");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.01;
+ 
+  border-radius: 2.25rem;
+}

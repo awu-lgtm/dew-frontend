@@ -1,0 +1,82 @@
+.home-weather-container {
+  display:flex;
+  width: 100vw;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-weather-card {
+  position: relative;
+  width: 26rem;
+  height: 25rem;
+  max-height: 30rem;
+  padding: 3rem 3.1rem 5rem 3.1rem;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, rgba(48, 55, 62, 0.5) 0%, rgba(28, 32, 36, 0.1) 100%);
+  border-radius: 2.25rem;
+}
+
+.home-weather-card::after {    
+  content: "";
+  background-image: url("../../assets/frosted glass.webp");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.02;
+ 
+  border-radius: 2.25rem;
+}
+
+.home-weather-temp {
+  font-size: 2.5rem;
+  font-family: "Inter-Bold";
+  margin-bottom: 2.5rem;
+  margin-left: 7rem;
+}
+
+#home-weather-feelslike {
+  margin-bottom: 2rem;
+}
+
+#home-weather-wind {
+  margin-bottom: 2rem;
+}
+
+.icon-temp{
+  width: 3rem;
+  display:block;
+}
+
+.home-weather-format {
+  box-sizing: border-box;
+  width: inherit;
+  height: 18rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.3rem;
+  font-family: "Inter-Regular"
+}
+
+.home-weather-format > div {
+  margin-top: 0.8rem;
+}
+
+.home-weather-header {
+  margin-bottom: 1.5rem;
+}
+
+.home-weather-icon {
+  width: 5rem;
+  position: absolute;
+  top: 7.4rem;
+}
