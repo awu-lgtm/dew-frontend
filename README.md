@@ -1,5 +1,5 @@
 # dew-frontend
-Frontend code for weather app [Dew](https://afternoon-crag-51976.herokuapp.com/)
+Frontend code for weather app [Dew](https://afternoon-crag-51976.herokuapp.com/). Backend code is here: [https://github.com/awu-lgtm/dew-backend]https://github.com/awu-lgtm/dew-backend.
 
 Built with React and Redux.
 
